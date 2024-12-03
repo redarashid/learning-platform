@@ -1,0 +1,22 @@
+body {
+    background-color: #222222;
+}
+
+.login button {
+    color: #FFF;
+    text-transform: none;
+    font-size: 1.2rem;
+}
+.login .sign {
+    color: red;
+}
+.login .line {
+    border-bottom: 2px solid red;
+    width: 100%;
+    bottom: 10px;
+}
+.Container .straight {
+    color: #fff;
+    width: 100%;
+    height: 2px;
+}
