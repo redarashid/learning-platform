@@ -5,32 +5,46 @@ import {
   Input,
   InputAdornment,
   InputLabel,
+  Stack,
+  TextField,
   Typography,
 } from "@mui/material";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
-import * as React from "react";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const Login = () => {
   const preventDefault = (event) => event.preventDefault();
 
-  const [showPassword, setShowPassword] = React.useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
-  const handleMouseUpPassword = (event) => {
-    event.preventDefault();
+
+
+
+  const navigate = useNavigate();
+  const [userName, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+
+  const handleLogin = () => {
+    if (userName === "user" && password === "password") {
+      navigate("/home");
+    } else {
+      alert("Invalid credentials");
+    }
   };
 
-  const handleMouseDownPassword = (event) => {
-    event.preventDefault();
-  };
+
+  const handleMouseDownPassword = (event) => event.preventDefault();
 
   return (
-    <Container className="login">
+    <Container sx={{ backgroundColor: "#222222" }} className="login">
       <Box
         sx={{
           display: "flex",
@@ -58,7 +72,7 @@ const Login = () => {
                 transition: "0.2s",
               },
             }}>
-            Features
+            Home Page
           </Typography>
           <Typography
             variant="body1"
@@ -102,13 +116,30 @@ const Login = () => {
             }}>
             Blog
           </Typography>
+          <Typography
+            variant="body1"
+            component="a"
+            href="#features"
+            sx={{
+              textDecoration: "none",
+              color: "#fff",
+              "&:hover": {
+                color: "#f00",
+              },
+              transition: "0.2s",
+            }}>
+            Instructors
+          </Typography>
         </Box>
 
         <Box sx={{ display: "flex", gap: "15px", alignItems: "center" }}>
-          <Button variant="text" sx={{ color: "#fff" }}>
+          <Button
+            onChange={(e) => setUsername(e.target.value)}
+            variant="text"
+            sx={{ color: "#fff" }}>
             Login
           </Button>
-          <Button variant="text" sx={{ color: "#DDD" }}>
+          <Button className="signIn" variant="text" sx={{ color: "#DDD" }}>
             Sign In
           </Button>
           <SearchOutlinedIcon sx={{ color: "#FFF", cursor: "pointer" }} />
@@ -135,9 +166,11 @@ const Login = () => {
           }}>
           Sign in to your account
         </Typography>
-        <FormControl sx={{ m: 1 }} variant="standard">
+        <FormControl defaultValue="Password" sx={{ m: 1 }} variant="standard">
           <InputLabel htmlFor="Password">Password</InputLabel>
           <Input
+            onChange={(e) => setPassword(e.target.value)}
+            value={password}
             placeholder="Password"
             sx={{
               backgroundColor: "#FFF",
@@ -149,13 +182,21 @@ const Login = () => {
             endAdornment={
               <InputAdornment position="end">
                 <IconButton
-                  sx={{ color: "red" }}
+                  sx={{
+                    color: "#ff00008f",
+                    "& svg": {
+                      color: "#ff00008f",
+                      "&:hover": {
+                        color: "rgb(244 203 54 / 91%)", // لون عند التمرير
+                      },
+                    },
+                  }}
                   aria-label={
                     showPassword ? "hide the password" : "display the password"
                   }
                   onClick={handleClickShowPassword}
                   onMouseDown={handleMouseDownPassword}
-                  onMouseUp={handleMouseUpPassword}>
+                  >
                   {showPassword ? <VisibilityOff /> : <Visibility />}
                 </IconButton>
               </InputAdornment>
@@ -165,6 +206,7 @@ const Login = () => {
         <FormControl variant="standard">
           <InputLabel htmlFor="component-simple">Name</InputLabel>
           <Input
+            value={userName}
             id="component-simple"
             sx={{
               backgroundColor: "#FFF",
@@ -174,19 +216,36 @@ const Login = () => {
             placeholder="UserName"
           />
         </FormControl>
-        <Typography sx={{ color: "red", cursor: "pointer" }}>
-          Forget the password?
-        </Typography>
-        <Button variant="contained" disableElevation>
+        <Box sx={{ display: "flex", gap: "1rem" }}>
+          <Typography
+            sx={{ color: "#fff", fontSize: "13px", cursor: "pointer" }}>
+            Remeber password
+          </Typography>
+          <Typography
+            sx={{
+              color: "#ff0000c9",
+              cursor: "pointer",
+              fontSize: "13px",
+              ml: "auto",
+              fontWeight: "bold",
+            }}>
+            Forgot password?
+          </Typography>
+        </Box>
+        <Button
+          onClick={handleLogin}
+          style={{ width: "250px", fontWeight: "bold" }}
+          variant="contained"
+          disableElevation>
           Supmit
         </Button>
       </Box>
       <div className="line"></div>
-      <Box
+      <Stack
         sx={{
+          flexDirection: "row",
           display: "flex",
           color: "#fff",
-          cursor: "pointer",
           mt: "1.5rem",
           gap: "5rem",
         }}>
@@ -195,6 +254,7 @@ const Login = () => {
             sx={{
               "&:hover": {
                 color: "red",
+                cursor: "pointer",
               },
             }}>
             Courses
@@ -203,6 +263,7 @@ const Login = () => {
             sx={{
               "&:hover": {
                 color: "red",
+                cursor: "pointer",
               },
             }}>
             Learn
@@ -211,6 +272,7 @@ const Login = () => {
             sx={{
               "&:hover": {
                 color: "red",
+                cursor: "pointer",
               },
             }}>
             Workshops
@@ -219,6 +281,7 @@ const Login = () => {
             sx={{
               "&:hover": {
                 color: "red",
+                cursor: "pointer",
               },
             }}>
             Topics
@@ -227,6 +290,7 @@ const Login = () => {
             sx={{
               "&:hover": {
                 color: "red",
+                cursor: "pointer",
               },
             }}>
             FAQ
@@ -237,6 +301,7 @@ const Login = () => {
             sx={{
               "&:hover": {
                 color: "red",
+                cursor: "pointer",
               },
             }}>
             Teachers
@@ -245,6 +310,7 @@ const Login = () => {
             sx={{
               "&:hover": {
                 color: "red",
+                cursor: "pointer",
               },
             }}>
             Reviews
@@ -253,6 +319,7 @@ const Login = () => {
             sx={{
               "&:hover": {
                 color: "red",
+                cursor: "pointer",
               },
             }}>
             Guides
@@ -261,6 +328,7 @@ const Login = () => {
             sx={{
               "&:hover": {
                 color: "red",
+                cursor: "pointer",
               },
             }}>
             Blog
@@ -269,6 +337,7 @@ const Login = () => {
             sx={{
               "&:hover": {
                 color: "red",
+                cursor: "pointer",
               },
             }}>
             Login
@@ -279,6 +348,7 @@ const Login = () => {
             sx={{
               "&:hover": {
                 color: "red",
+                cursor: "pointer",
               },
             }}>
             Teachers
@@ -287,6 +357,7 @@ const Login = () => {
             sx={{
               "&:hover": {
                 color: "red",
+                cursor: "pointer",
               },
             }}>
             Reviews
@@ -295,6 +366,7 @@ const Login = () => {
             sx={{
               "&:hover": {
                 color: "red",
+                cursor: "pointer",
               },
             }}>
             Guides
@@ -303,6 +375,7 @@ const Login = () => {
             sx={{
               "&:hover": {
                 color: "red",
+                cursor: "pointer",
               },
             }}>
             Blog
@@ -311,6 +384,7 @@ const Login = () => {
             sx={{
               "&:hover": {
                 color: "red",
+                cursor: "pointer",
               },
             }}>
             Join Now
@@ -321,6 +395,7 @@ const Login = () => {
             sx={{
               "&:hover": {
                 color: "red",
+                cursor: "pointer",
               },
             }}>
             Teachers
@@ -329,6 +404,7 @@ const Login = () => {
             sx={{
               "&:hover": {
                 color: "red",
+                cursor: "pointer",
               },
             }}>
             Reviews
@@ -337,6 +413,7 @@ const Login = () => {
             sx={{
               "&:hover": {
                 color: "red",
+                cursor: "pointer",
               },
             }}>
             Guides
@@ -345,6 +422,7 @@ const Login = () => {
             sx={{
               "&:hover": {
                 color: "red",
+                cursor: "pointer",
               },
             }}>
             Blog
@@ -353,13 +431,33 @@ const Login = () => {
             sx={{
               "&:hover": {
                 color: "red",
+                cursor: "pointer",
               },
             }}>
             Join Now
           </Typography>
         </Box>
-      </Box>
-      
+        <Box
+          sx={{
+            color: "gray",
+            display: "flex",
+            mb: "1rem",
+            justifyContent: "center",
+            alignItems: "end",
+          }}>
+          Create By <span style={{ color: "red" }}>Rashid Reda</span> 2024
+        </Box>
+        <Box>
+          <div>
+            <TextField
+              sx={{ background: "#FFF", borderRadius: "4px" }}
+              id="outlined-multiline-static"
+              rows={4}
+              placeholder="Say your opinion..."
+            />
+          </div>
+        </Box>
+      </Stack>
     </Container>
   );
 };

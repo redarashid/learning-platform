@@ -1,5 +1,10 @@
+
 body {
-    background-color: #222222;
+    background-color: #fff;
+}
+
+.home {
+    background-color: linear-gradient(to right, rgb(0, 0, 0), #010d55);
 }
 
 .login button {
@@ -7,11 +12,13 @@ body {
     text-transform: none;
     font-size: 1.2rem;
 }
-.login .sign {
-    color: red;
+
+.login button:hover {
+    color: #ff00008f;
 }
+
 .login .line {
-    border-bottom: 2px solid red;
+    border-bottom: 1px solid red;
     width: 100%;
     bottom: 10px;
 }
