@@ -4,6 +4,7 @@ import App from './App.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Login from './components/Login.jsx'
 import Header from './components/home/Header.jsx'
+import Hero from './components/home/Hero.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -12,6 +13,7 @@ createRoot(document.getElementById('root')).render(
       <Route path='/' element={<Login />}></Route>
       <Route path='/login' element={<Login />}></Route>
       <Route path='/home' element={<Header />}></Route>
+      <Route path='/hero' element={<Hero />}></Route>
     </Routes>
     <App />
   </BrowserRouter>
