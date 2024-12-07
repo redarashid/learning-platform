@@ -690,7 +690,6 @@ const Hero = () => {
               justifyContent: "space-between",
               gap: "1.5rem",
             }}>
-
             <Box sx={{ mt: "1.5rem", textAlign: "right" }}>
               <img src="/public/images/machine.svg" />
               <Typography
@@ -704,7 +703,10 @@ const Hero = () => {
             </Box>
 
             <Box sx={{ mt: "1.5rem", textAlign: "right" }}>
-              <img src="/public/images/gate.svg" style={{width: "3rem", height: "3rem"}} />
+              <img
+                src="/public/images/gate.svg"
+                style={{ width: "3rem", height: "3rem" }}
+              />
               <Typography
                 variant="h3"
                 sx={{ fontWeight: "bold", fontSize: "1.5rem" }}>
@@ -735,6 +737,134 @@ const Hero = () => {
             src="/public/images/learn.webp"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
+        </Box>
+      </Stack>
+
+      <Stack
+        sx={{
+          width: "100%",
+          backgroundColor: "#FAFBFC",
+        }}>
+        <Typography
+          variant="h4"
+          sx={{
+            fontSize: "25px",
+            textAlign: "center",
+            justifyContent: "center",
+            pt: "5rem",
+            color: "#507FB5",
+          }}>
+          شركاؤنا في النّجاح
+        </Typography>
+        <Box sx={{ p: "2rem", display: "flex", flexWrap: "wrap" }}>
+          <a href="#" style={{ padding: "2rem 1.5rem" }}>
+            <img
+              src="/public/images/aap-logo-2017-cine.jpg"
+              height={"50px"}
+              width={"auto"}
+            />
+          </a>
+          <a href="#" style={{ padding: " 1.5rem" }}>
+            <img
+              src="/public/images/hikma.png"
+              height={"50px"}
+              width={"auto"}
+            />
+          </a>
+          <a href="#" style={{ padding: "1.5rem" }}>
+            <img
+              src="/public/images/Arab_bank.png"
+              height={"50px"}
+              width={"auto"}
+            />
+          </a>
+          <a href="#" style={{ padding: "1.5rem" }}>
+            <img
+              src="/public/images/Meta_Logo.png"
+              height={"50px"}
+              width={"auto"}
+            />
+          </a>
+          <a href="#" style={{ padding: "1.5rem" }}>
+            <img
+              src="/public/images/potash.png"
+              height={"50px"}
+              width={"auto"}
+            />
+          </a>
+          <a href="#" style={{ padding: "1.5rem" }}>
+            <img
+              src="/public/images/ritlogo.png"
+              height={"50px"}
+              width={"auto"}
+            />
+          </a>
+          <a href="#" style={{ padding: "1.5rem" }}>
+            <img
+              src="/public/images/VanLeer_short_colour-grey.png"
+              height={"50px"}
+              width={"auto"}
+            />
+          </a>
+          <a href="#" style={{ padding: "1.5rem" }}>
+            <img
+              src="/public/images/logo_Kingdom_of_the_netherlands.png"
+              height={"50px"}
+              width={"auto"}
+            />
+          </a>
+          <a href="#" style={{ padding: "1.5rem" }}>
+            <img
+              src="/public/images/JMF-logo.png"
+              height={"50px"}
+              width={"auto"}
+            />
+          </a>
+          <a href="#" style={{ padding: "1.5rem" }}>
+            <img
+              src="/public/images/Turquoise_Mountain-Logo.png"
+              height={"50px"}
+              width={"auto"}
+            />
+          </a>
+          <a href="#" style={{ padding: "1.5rem" }}>
+            <img
+              src="/public/images/University_College_London_logo.png"
+              height={"50px"}
+              width={"auto"}
+            />
+          </a>
+          <a href="#" style={{ padding: "1.5rem" }}>
+            <img src="/public/images/AR.png" height={"50px"} width={"auto"} />
+          </a>
+        </Box>
+      </Stack>
+
+      <Stack
+        sx={{
+          backgroundColor: "#58C0C3",
+          textAlign: "center",
+          justifyContent: "center",
+          p: "70px 0",
+          flexDirection: "row",
+        }}>
+        <Box sx={{ textAlign: "right", padding: "0 60px" }}>
+          <Typography
+            variant="h2"
+            sx={{ color: "#FFF", fontWeight: "bold", pb: "1.5rem" }}>
+            موارد التعليم المدرسي
+          </Typography>
+          <Typography variant="h4" sx={{ color: "#FFF", pb: "1.5rem" }}>
+            توفّر منصة إدراك للتعليم المدرسي مواد تعليمية مجانية باللّغة العربية
+            لدعم طلبة المدارس من جميع الفئات العمرية.
+          </Typography>
+          <Button sx={{ backgroundColor: "#FFF", borderRadius: "20px", color: "#000" }}>
+            تفضل بزيارة منصه التعليم المدرسى K-12
+          </Button>
+        </Box>
+
+        <Box>
+          <img src="/public/images/children.svg" />
         </Box>
       </Stack>
     </>
