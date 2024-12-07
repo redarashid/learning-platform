@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Login from './components/Login.jsx'
 import Header from './components/home/Header.jsx'
 import Hero from './components/home/Hero.jsx'
-import Footer from './components/home/Footer.jsx'
+import Footer from './components/Footer.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

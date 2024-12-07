@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 import { Pagination } from "swiper/modules";
+import Footer from "../Footer";
 
 const Hero = () => {
   return (
@@ -867,6 +868,8 @@ const Hero = () => {
           <img src="/public/images/children.svg" />
         </Box>
       </Stack>
+
+      <Footer />
     </>
   );
 };

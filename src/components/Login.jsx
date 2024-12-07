@@ -145,6 +145,7 @@ const Login = () => {
           <SearchOutlinedIcon sx={{ color: "#FFF", cursor: "pointer" }} />
         </Box>
       </Box>
+
       <div className="line"></div>
       <Box
         sx={{
@@ -240,7 +241,9 @@ const Login = () => {
           Supmit
         </Button>
       </Box>
+
       <div className="line"></div>
+      
       <Stack
         sx={{
           flexDirection: "row",
