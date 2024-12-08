@@ -1,5 +1,7 @@
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import NavBar from "../NavBar";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
 
 // import useMediaQuery from '@mui/material/useMediaQuery';
 
@@ -346,21 +348,75 @@ const Courses = () => {
                         position: "absolute",
                         right: "10rem",
                         fontSize: "1.3rem",
-                        color: "#4D6679"
+                        color: "#4D6679",
                       }}>
                       التخصّصات هي برامج مكثّفة تساعدك على التعمّق في مجالات
                       مختلفة، تعلّم المزيد
                     </Typography>
                   </Box>
+
                   <Box
                     sx={{
-                      border: "1px solid #ccc",
-                      borderRadius: "8px",
-                      padding: "20px",
+                      width: "100%",
                     }}>
-                    <Button variant="outlined" sx={{ marginTop: "10px" }}>
-                      تخصّص
-                    </Button>
+                    <Swiper
+                      navigation={true}
+                      modules={[Navigation]}
+                      className="mySwiper"
+                      spaceBetween={20} // المسافة بين البوكسات
+                      slidesPerView={1} // عدد العناصر الافتراضي
+                      breakpoints={{
+                        768: {
+                          slidesPerView: 2, // يظهر عنصرين على الشاشات المتوسطة
+                        },
+                        1024: {
+                          slidesPerView: 3, // يظهر ثلاثة عناصر على الشاشات الكبيرة
+                        },
+                      }}>
+                      {[...Array(6)].map((_, index) => (
+                        <SwiperSlide
+                          key={index}
+                          style={{
+                            display: "flex",
+                            justifyContent: "center", // لمحاذاة العناصر وسط السلايد
+                          }}>
+                          <Box
+                            sx={{
+                              flex: 1, // يضمن أن العناصر تتمدد لتملأ المساحة
+                              maxWidth: "calc(100% / 3)", // يجعل كل عنصر يأخذ ثلث العرض
+                              border: "1px solid #ccc",
+                              borderRadius: "8px",
+                              overflow: "hidden",
+                              textAlign: "center",
+                              backgroundColor: "#fff",
+                              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+                            }}>
+                            {/* الصورة */}
+                            <Box
+                              component="img"
+                              src="https://via.placeholder.com/300x200"
+                              alt={`Image ${index + 1}`}
+                              sx={{
+                                width: "100%",
+                                height: "200px",
+                                objectFit: "cover",
+                              }}
+                            />
+                            {/* الوصف */}
+                            <Box sx={{ padding: "16px" }}>
+                              <Typography variant="h6" gutterBottom>
+                                عنوان الصورة {index + 1}
+                              </Typography>
+                              <Typography
+                                variant="body2"
+                                color="text.secondary">
+                                هذا هو وصف للصورة رقم {index + 1}.
+                              </Typography>
+                            </Box>
+                          </Box>
+                        </SwiperSlide>
+                      ))}
+                    </Swiper>
                   </Box>
                 </Grid>
 
