@@ -1,3 +1,6 @@
+
+
+
 import {
   Container,
   FormControl,
@@ -23,6 +26,8 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
+  const handleMouseDownPassword = (event) => event.preventDefault();
+
 
 
 
@@ -34,17 +39,22 @@ const Login = () => {
 
   const handleLogin = () => {
     if (userName === "user" && password === "password") {
-      navigate("/home");
+      navigate("/couses");
     } else {
       alert("Invalid credentials");
     }
   };
 
+  const goToCourses = () => {
+    navigate("/couses")
+  }
+  const goToHomePage = () => {
+    navigate("/header")
+  }
 
-  const handleMouseDownPassword = (event) => event.preventDefault();
 
   return (
-    <Container sx={{ backgroundColor: "#222222" }} className="login">
+    <Container  className="login">
       <Box
         sx={{
           display: "flex",
@@ -53,6 +63,7 @@ const Login = () => {
           padding: "10px 20px",
           backgroundColor: "#333",
           color: "#fff",
+          background: "#222222"
         }}>
         <Box
           sx={{
@@ -61,6 +72,7 @@ const Login = () => {
           }}
           onClick={preventDefault}>
           <Typography
+            onClick={goToHomePage }
             variant="body1"
             component="a"
             href="#features"
@@ -75,6 +87,7 @@ const Login = () => {
             Home Page
           </Typography>
           <Typography
+            onClick={goToCourses}
             variant="body1"
             component="a"
             href="#features"
@@ -167,7 +180,23 @@ const Login = () => {
           }}>
           Sign in to your account
         </Typography>
-        <FormControl defaultValue="Password" sx={{ m: 1 }} variant="standard">
+
+        <FormControl style={{width: "30%"}}  variant="standard">
+          <InputLabel htmlFor="component-simple">Name</InputLabel>
+          <Input
+            value={userName}
+            onChange={(e)=> setUsername(e.target.value)}
+            id="component-simple"
+            sx={{
+              backgroundColor: "#FFF",
+              padding: "7px 20px",
+              borderRadius: "4px",
+            }}
+            placeholder="UserName"
+          />
+        </FormControl>
+
+        <FormControl defaultValue="Password" sx={{ m: 1 }} style={{width: "30%"}}  variant="standard">
           <InputLabel htmlFor="Password">Password</InputLabel>
           <Input
             onChange={(e) => setPassword(e.target.value)}
@@ -204,19 +233,8 @@ const Login = () => {
             }
           />
         </FormControl>
-        <FormControl variant="standard">
-          <InputLabel htmlFor="component-simple">Name</InputLabel>
-          <Input
-            value={userName}
-            id="component-simple"
-            sx={{
-              backgroundColor: "#FFF",
-              padding: "7px 20px",
-              borderRadius: "4px",
-            }}
-            placeholder="UserName"
-          />
-        </FormControl>
+
+        
         <Box sx={{ display: "flex", gap: "1rem" }}>
           <Typography
             sx={{ color: "#fff", fontSize: "13px", cursor: "pointer" }}>

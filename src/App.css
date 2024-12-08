@@ -1,5 +1,5 @@
 body {
-  background-color: #fff;
+  background-color: #fff !important;
 }
 * {
   outline: 0 !important;
@@ -8,6 +8,11 @@ body {
 
 .home {
   background-color: linear-gradient(to right, rgb(0, 0, 0), #010d55);
+}
+
+.login {
+  background-color: #25343f !important;
+  width: 100% !important;
 }
 
 .login button {
@@ -50,7 +55,6 @@ body {
   gap: 10px;
   justify-content: flex-end;
   text-align: right;
-
 }
 
 .social-link {
@@ -68,28 +72,25 @@ body {
 .social-link:hover {
   background-color: #2d3748;
 }
-/* Footer.css */
-.footer-container {
-  background-color: #0b0e15;
-  padding: 20px;
-  color: #b3dff5;
-}
-
+/* إضافة تنسيق لأقسام الفوتر لعرضها بجانب بعض */
 .footer-sections {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex; /* استخدام flex لعرض الأقسام بجانب بعض */
+  justify-content: space-between; /* توزيع المسافة بين الأقسام */
+  flex-wrap: wrap; /* السماح للأقسام بالانتقال إلى سطر جديد إذا كانت الشاشة صغيرة */
   gap: 20px;
 }
 
 .footer-section {
-  flex: 1 1 200px;
+  flex: 1 1 200px; /* تحديد أن كل قسم سيكون له حجم مرن */
 }
 
 .footer-title {
   font-size: 18px;
   margin-bottom: 10px;
   font-weight: bold;
+  color: #fff;
 }
 
 .footer-links {
@@ -100,7 +101,7 @@ body {
 
 .footer-link {
   display: block;
-  color: #b3dff5;
+  color: #fff;
   text-decoration: none;
   margin-bottom: 8px;
   transition: color 0.3s ease;

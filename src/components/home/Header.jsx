@@ -9,8 +9,10 @@ import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import DirectionsIcon from "@mui/icons-material/Directions";
 import Hero from "./Hero";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <Container>
       <Stack
@@ -28,6 +30,7 @@ const Header = () => {
               fontWeight: "bold",
               mr: "0.7rem",
             }}
+            onClick={()=> navigate("/login")}
             variant="contained"
             href="#contained-buttons">
             سجل مجانا
@@ -120,7 +123,12 @@ const Header = () => {
             <img
               src="/public/images/logo.png"
               alt="Logo"
-              style={{ width: 150, height: 50, marginRight: 10, cursor: "pointer" }}
+              style={{
+                width: 150,
+                height: 50,
+                marginRight: 10,
+                cursor: "pointer",
+              }}
             />
           </a>
         </Box>

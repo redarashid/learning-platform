@@ -62,10 +62,10 @@ const Footer = () => {
         ))}
       </Box>
 
-      <Stack>
-        <div className="footer-sections">
+      <Stack sx={{direction: "row", textAlign: "right"}}>
+        <Box  className="footer-sections">
           {sections.map((section, index) => (
-            <div key={index} className="footer-section">
+            <Box key={index} className="footer-section">
               <h3 className="footer-title">{section.title}</h3>
               <ul className="footer-links">
                 {section.links.map((link, i) => (
@@ -76,9 +76,9 @@ const Footer = () => {
                   </li>
                 ))}
               </ul>
-            </div>
+            </Box>
           ))}
-        </div>
+        </Box>
       </Stack>
     </div>
   );
