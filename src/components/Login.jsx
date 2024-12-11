@@ -51,6 +51,9 @@ const Login = () => {
   const goToHomePage = () => {
     navigate("/header")
   }
+  const goToLearning = () => {
+    navigate("/learning")
+  }
 
 
   return (
@@ -102,6 +105,7 @@ const Login = () => {
             Courses
           </Typography>
           <Typography
+            onClick={goToLearning}
             variant="body1"
             component="a"
             href="#features"
