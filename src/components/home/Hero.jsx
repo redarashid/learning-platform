@@ -839,6 +839,16 @@ const Hero = () => {
             <img src="/public/images/AR.png" height={"50px"} width={"auto"} />
           </a>
         </Box>
+        <Button
+          sx={{
+            justifyContent: "center",
+            alignItems: "center",
+            mb: "3rem",
+            border: "1px solid #4D6679",
+            width: "50%"
+          }}>
+          اعرض جميع الشركاء
+        </Button>
       </Stack>
 
       <Stack
@@ -859,7 +869,12 @@ const Hero = () => {
             توفّر منصة إدراك للتعليم المدرسي مواد تعليمية مجانية باللّغة العربية
             لدعم طلبة المدارس من جميع الفئات العمرية.
           </Typography>
-          <Button sx={{ backgroundColor: "#FFF", borderRadius: "20px", color: "#000" }}>
+          <Button
+            sx={{
+              backgroundColor: "#FFF",
+              borderRadius: "20px",
+              color: "#000",
+            }}>
             تفضل بزيارة منصه التعليم المدرسى K-12
           </Button>
         </Box>
