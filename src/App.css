@@ -75,22 +75,22 @@ body {
 /* إضافة تنسيق لأقسام الفوتر لعرضها بجانب بعض */
 .footer-sections {
   max-width: 1200px;
-  margin: 0 auto;
   display: flex; /* استخدام flex لعرض الأقسام بجانب بعض */
   justify-content: space-between; /* توزيع المسافة بين الأقسام */
   flex-wrap: wrap; /* السماح للأقسام بالانتقال إلى سطر جديد إذا كانت الشاشة صغيرة */
   gap: 20px;
+  margin-top: 5vh;
 }
 
 .footer-section {
-  flex: 1 1 200px; /* تحديد أن كل قسم سيكون له حجم مرن */
+  flex: 1 1 200px; 
 }
 
 .footer-title {
-  font-size: 18px;
+  font-size: 25px;
   margin-bottom: 10px;
   font-weight: bold;
-  color: #fff;
+  color: #A4C0D2;
 }
 
 .footer-links {
@@ -101,7 +101,7 @@ body {
 
 .footer-link {
   display: block;
-  color: #fff;
+  color: #59768A;
   text-decoration: none;
   margin-bottom: 8px;
   transition: color 0.3s ease;

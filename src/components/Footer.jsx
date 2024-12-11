@@ -62,7 +62,7 @@ const Footer = () => {
         ))}
       </Box>
 
-      <Stack sx={{direction: "row", textAlign: "right"}}>
+      <Stack sx={{direction: "row", textAlign: "right", margin: "4vh 8vh"}}>
         <Box  className="footer-sections">
           {sections.map((section, index) => (
             <Box key={index} className="footer-section">
