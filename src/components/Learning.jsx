@@ -4,6 +4,7 @@ import NavBar from "../components/NavBar";
 import Footer from "./Footer";
 
 const Learning = () => {
+
   return (
     <div>
       <NavBar />

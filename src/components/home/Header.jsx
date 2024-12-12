@@ -12,6 +12,9 @@ import Hero from "./Hero";
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const goHomePge = () => {
+    navigate("/header");
+  };
   const navigate = useNavigate();
   return (
     <Container>
@@ -30,7 +33,7 @@ const Header = () => {
               fontWeight: "bold",
               mr: "0.7rem",
             }}
-            onClick={()=> navigate("/login")}
+            onClick={() => navigate("/login")}
             variant="contained"
             href="#contained-buttons">
             سجل مجانا
@@ -119,7 +122,7 @@ const Header = () => {
             }}>
             تصفح
           </Typography>
-          <a>
+          <a onClick={goHomePge}>
             <img
               src="/public/images/logo.png"
               alt="Logo"

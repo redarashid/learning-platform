@@ -7,9 +7,17 @@ import {
   Toolbar,
 } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
   const isMobile = useMediaQuery("(max-width:600px)");
+
+  const navigate = useNavigate();
+
+
+  const goHomePge = () => {
+    navigate("/header");
+  };
 
   return (
     <AppBar
@@ -28,6 +36,7 @@ const NavBar = () => {
           alignItems: "center",
         }}>
         <Box
+          onClick={goHomePge}
           component="img"
           src="/public/images/logo.png"
           alt="Logo"
@@ -35,6 +44,7 @@ const NavBar = () => {
             height: 40,
             width: "auto",
             marginRight: "auto",
+            cursor: "pointer"
           }}
         />
         <Box

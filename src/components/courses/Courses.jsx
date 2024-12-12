@@ -2,6 +2,7 @@ import { Box, Button, Grid, Typography } from "@mui/material";
 import NavBar from "../NavBar";
 
 import CardSlider from "../slider/CardSlider";
+import Footer from "../Footer";
 
 // import useMediaQuery from '@mui/material/useMediaQuery';
 
@@ -361,76 +362,10 @@ const Courses = () => {
           </Grid>
         </Grid>
       </Box>
+
+      <Footer />
     </div>
   );
 };
 
 export default Courses;
-
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { Navigation } from "swiper/modules";
-
-{
-  /* <Box
-sx={{
-  width: "100%",
-  zIndex: 1
-}}>
-<Swiper
-  navigation={true}
-  modules={[Navigation]}
-  className="mySwiper"
-  spaceBetween={20}  
-  slidesPerView={1} 
-  breakpoints={{
-    768: {
-      slidesPerView: 2, 
-    },
-    1024: {
-      slidesPerView: 3, 
-    },
-  }}>
-  {[...Array(6)].map((_, index) => (
-    <SwiperSlide
-      key={index}
-      style={{
-        display: "flex",
-        justifyContent: "center", 
-      }}>
-      <Box
-        sx={{
-          flex: 1,
-          maxWidth: "calc(100% / 3)", 
-          border: "1px solid #ccc",
-          borderRadius: "8px",
-          overflow: "hidden",
-          textAlign: "center",
-          backgroundColor: "#fff",
-          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-        }}>
-        <Box
-          component="img"
-          src="https://via.placeholder.com/300x200"
-          alt={`Image ${index + 1}`}
-          sx={{
-            width: "100%",
-            height: "200px",
-            objectFit: "cover",
-          }}
-        />
-        <Box sx={{ padding: "16px" }}>
-          <Typography variant="h6" gutterBottom>
-            عنوان الصورة {index + 1}
-          </Typography>
-          <Typography
-            variant="body2"
-            color="text.secondary">
-            هذا هو وصف للصورة رقم {index + 1}.
-          </Typography>
-        </Box>
-      </Box>
-    </SwiperSlide>
-  ))}
-</Swiper>
-</Box> */
-}
