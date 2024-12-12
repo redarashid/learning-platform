@@ -12,10 +12,16 @@ import Hero from "./Hero";
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
+
   const goHomePge = () => {
     navigate("/header");
   };
-  const navigate = useNavigate();
+
+  const goMyBoard = () => {
+    navigate("/board");
+  };
+
   return (
     <Container>
       <Stack
@@ -60,6 +66,7 @@ const Header = () => {
               color: "#747A85",
               fontWeight: "bold",
               opacity: "5",
+              mr: "0.7rem",
               borderRadius: "23px",
               "&:hover": {
                 backgroundColor: "#0CA7AA",
@@ -68,6 +75,24 @@ const Header = () => {
             }}
             href="#contained-buttons">
             En
+          </Button>
+          <Button
+            onClick={goMyBoard}
+            sx={{
+              border: "1px solid #0CA7AA",
+              color: "#747A85",
+              fontWeight: "bold",
+              opacity: "5",
+              padding: "5px 15px",
+              borderRadius: "23px",
+              
+              "&:hover": {
+                backgroundColor: "#0CA7AA",
+                color: "#FFF",
+              },
+            }}
+            href="#contained-buttons">
+            لوحتى التعليميه
           </Button>
         </Box>
 

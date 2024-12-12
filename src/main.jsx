@@ -11,6 +11,7 @@ import Courses from './components/courses/Courses.jsx'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Learning from './components/Learning.jsx'
+import Board from './components/board/Board.jsx'
 
 
 createRoot(document.getElementById('root')).render(
@@ -23,6 +24,7 @@ createRoot(document.getElementById('root')).render(
       <Route path='/hero' element={<Hero />}></Route>
       <Route path='/couses' element={<Courses />}></Route>
       <Route path='/learning' element={<Learning />}></Route>
+      <Route path='/board' element={<Board />}></Route>
       <Route path='/footer' element={<Footer />}></Route>
 
 
