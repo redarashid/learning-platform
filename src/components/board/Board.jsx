@@ -1,113 +1,102 @@
-import { Box, Grid } from "@mui/material";
-import Button from "@mui/material/Button";
-import Stack from "@mui/material/Stack";
+import { Box, Button, Grid, Stack, Typography } from "@mui/material";
+import NavBoard from "../NavBoard";
 
 const Board = () => {
   return (
-    <Grid
-      position="fixed"
-      sx={{
-        backgroundColor: "#FFF",
-        boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
-        width: "100%",
-        padding: "1rem",
-        zIndex: 1,
-      }}>
-      <Stack
-        direction="row"
-        width={"100%"}
-        spacing={2}
-        justifyContent="space-between"
-        alignItems="center">
-        <Box sx={{ display: "flex", alignItems: "center" }}>
-          <Button
-            sx={{
-              border: "1px solid #0CA7AA",
-              color: "#747A85",
-              fontWeight: "bold",
-              opacity: "5",
-              mr: "0.7rem",
-              borderRadius: "23px",
-              padding: "0.5rem 1rem",
-              fontSize: "1rem",
-              "&:hover": {
-                backgroundColor: "#0CA7AA",
-                color: "#FFF",
-              },
-            }}
-            href="#contained-buttons">
-            EN
-          </Button>
-        </Box>
+    <>
+      <NavBoard />
 
-        <Box sx={{ display: "flex", alignItems: "center" }}>
-          <Box sx={{ mr: "2rem" }}>
-            <Button
+      <Box sx={{ height: "100vh" }}>
+        <Grid container sx={{ height: "100%" }}>
+          <Grid
+            item
+            xs={12}
+            md={8}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              padding: 2,
+              justifyContent: "center",
+              alignItems: "center",
+            }}>
+            <Box
               sx={{
-                border: "1px solid #0CA7AA",
-                color: "#747A85",
-                fontWeight: "bold",
-                opacity: "5",
-                mr: "0.7rem",
-                borderRadius: "5px",
-                padding: "0.5rem 1rem",
-                fontSize: "1rem",
-                "&:hover": {
-                  backgroundColor: "#0CA7AA",
-                  color: "#FFF",
-                },
-              }}
-              href="#contained-buttons">
-              المواضيع الدراسيه
-            </Button>
-            <Button
-              sx={{
-                border: "1px solid #0CA7AA",
-                color: "#747A85",
-                fontWeight: "bold",
-                opacity: "5",
-                mr: "0.7rem",
-                borderRadius: "5px",
-                padding: "0.5rem 1rem",
-                fontSize: "1rem",
-                "&:hover": {
-                  backgroundColor: "#0CA7AA",
-                  color: "#FFF",
-                },
-              }}
-              href="#contained-buttons">
-              جميع المسابقات
-            </Button>
-            <Button
-              sx={{
-                border: "1px solid #0CA7AA",
-                fontWeight: "bold",
-                opacity: "5",
-                borderRadius: "5px",
-                padding: "0.5rem 1rem",
-                fontSize: "1rem",
-                backgroundColor: "#0CA7AA",
-                color: "#FFF",
-              }}
-              href="#contained-buttons">
-              لوحتى التعليميه
-            </Button>
-          </Box>
-          <a>
-            <img
-              src="/images/logo.png"
-              alt="Logo"
-              style={{
-                width: 130,
-                height: 40,
-                marginRight: 10,
-                cursor: "pointer",
-              }}
-            />
-          </a>
+                display: "flex",
+                justifyContent: "center",
+                flexDirection: "column",
+                padding: "2.75rem 1.25rem",
+                alignItems: "center",
+              }}>
+              <img src="/images/balloon.svg" />
+              <Typography
+                sx={{
+                  mt: "1.25rem",
+                  color: "#c5c5c5",
+                  fontSize: "1.9rem",
+                  fontWeight: "bold",
+                }}>
+                لم تقم بالتسجيل في أي مساق بعد
+              </Typography>
+              <Button
+                sx={{
+                  border: "1px solid",
+                  color: "#3f5767",
+                  background: "transparent",
+                  borderColor: "#3f5767",
+                  opacity: "5",
+                  borderRadius: "23px",
+                  padding: "0.5rem 1.4rem",
+                  letterSpacing: "1.8",
+                  mt: "1.25rem",
+                  "&:hover": {
+                    backgroundColor: "#3f5767",
+                    color: "#FFF",
+                  },
+                }}
+                href="#contained-buttons">
+                تصفح المساقات
+              </Button>
+            </Box>
+          </Grid>
+
+          <Grid>
+            <Box></Box>
+          </Grid>
+        </Grid>
+      </Box>
+
+      <Stack
+        sx={{
+          justifyContent: "space-around",
+          flexDirection: { xs: "column", md: "row" },
+          background: "#fafbfc",
+          fontWeight: "normal",
+          paddingBottom: "26px",
+          paddingTop: "36px",
+          gap: { xs: 4, md: 2 },
+          alignItems: "center",
+          textAlign: { xs: "center", md: "start" },
+          color: "#A99E9C",
+        }}>
+        <Box sx={{ textAlign: "right", cursor: "pointer" }}>
+          <Typography sx={{ color: "#A99E9C" }}>شروط الخدمة</Typography>
+          <Typography>سياسة الخصوصية</Typography>
+          <Typography>سياسة ملفات الارتباط</Typography>
+          <Typography>اتفاقية تحليل البيانات</Typography>
+          <Typography>تواصل معنا</Typography>
+        </Box>
+        <Box sx={{ textAlign: "right", cursor: "pointer" }}>
+          <Typography>عن إدراك</Typography>
+          <Typography>المدونة</Typography>
+          <Typography>كيف تتعلم مع إدراك</Typography>
+          <Typography>مركز المساعدة</Typography>
+        </Box>
+        <Box sx={{ textAlign: "right", cursor: "pointer" }}>
+          <Typography>© 2024 إدراك.</Typography>
+          <Typography>جميع الحقوق محفوظة.</Typography>
         </Box>
       </Stack>
-    </Grid>
+    </>
   );
 };
 
