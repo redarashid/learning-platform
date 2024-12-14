@@ -43,7 +43,6 @@ const Hero = () => {
                 lineHeight: "1.2",
                 textAlign: "right",
                 mt: 2,
-                
               }}>
               قم ببناء مهاراتك العمليّة من خلال الالتحاق ببرامج تدريبيّة
               متطوّرة، واكتسب شهادات تساعدك للدخول في سوق العمل وتطوير مسيرتك
@@ -840,16 +839,6 @@ const Hero = () => {
             <img src="/public/images/AR.png" height={"50px"} width={"auto"} />
           </a>
         </Box>
-        <Button
-          sx={{
-            justifyContent: "center",
-            alignItems: "center",
-            mb: "3rem",
-            border: "1px solid #4D6679",
-            width: "50%"
-          }}>
-          اعرض جميع الشركاء
-        </Button>
       </Stack>
 
       <Stack
@@ -878,10 +867,10 @@ const Hero = () => {
             }}>
             تفضل بزيارة منصه التعليم المدرسى K-12
           </Button>
-        </Box>
 
-        <Box>
-          <img src="/public/images/children.svg" />
+          <Box>
+            <img src="/public/images/children.svg" />
+          </Box>
         </Box>
       </Stack>
 

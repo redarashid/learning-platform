@@ -38,19 +38,25 @@ body {
 .section {
   background-color: #e9f6fb;
 }
+
 .social-container {
   text-align: right;
   padding: 20px;
   background-color: #0b0e15;
+  position: relative;
+  bottom: 0;
+  right: 0;
 }
 
 .social-title {
   font-size: 18px;
+  padding-right: 50px;
   color: #b3dff5;
   margin-bottom: 10px;
 }
 
 .social-links {
+  padding-right: 50px;
   display: flex;
   gap: 10px;
   justify-content: flex-end;
@@ -72,6 +78,7 @@ body {
 .social-link:hover {
   background-color: #2d3748;
 }
+
 /* إضافة تنسيق لأقسام الفوتر لعرضها بجانب بعض */
 .footer-sections {
   max-width: 1200px;
