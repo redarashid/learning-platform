@@ -274,7 +274,7 @@ const Hero = () => {
                   </Box>
                   <Box>
                     <img
-                      src="/images/The-Managers-Essential-Toolkit-Profile.jpg"
+                      src="/public/images/managers.jpg"
                       style={{
                         objectFit: "cover",
                         width: "100%",
