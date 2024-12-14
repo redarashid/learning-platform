@@ -10,7 +10,7 @@ import Footer from "../Footer";
 
 const Hero = () => {
   return (
-    <>
+    <Box>
       <Container sx={{ height: "300vh" }}>
         <Box
           sx={{
@@ -867,15 +867,15 @@ const Hero = () => {
             }}>
             تفضل بزيارة منصه التعليم المدرسى K-12
           </Button>
+        </Box>
 
-          <Box>
-            <img src="/public/images/children.svg" />
-          </Box>
+        <Box>
+          <img src="/public/images/children.svg" />
         </Box>
       </Stack>
 
       <Footer />
-    </>
+    </Box>
   );
 };
 
