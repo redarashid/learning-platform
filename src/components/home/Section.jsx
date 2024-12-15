@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Stack, Typography } from "@mui/material";
+import { Box, Button, Container, Grid, Stack, Typography } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 
@@ -190,7 +190,7 @@ const Section = () => {
     //   </Grid>
     // </Box>
 
-    <Box sx={{ flexGrow: 1,  width: "100%" }}>
+    <Box sx={{ flexGrow: 1, width: "100%" }}>
       <Grid container spacing={0}>
         <Grid item xs={12} sm={6} md={4}>
           <Box
@@ -206,11 +206,12 @@ const Section = () => {
               textAlign: "center",
             }}>
             <Typography variant="h4" sx={{ marginBottom: "1rem" }}>
-              مرحبًا بك في الصفحة الرئيسية
+              اصقل مهاراتك العمليّة مع تخصّصات إدراك
             </Typography>
             <Typography variant="body1" sx={{ marginBottom: "1rem" }}>
-              هذا هو الجزء الرئيسي من الصفحة حيث يمكنك إضافة النصوص أو المحتوى
-              الذي تريد عرضه.
+              قم بتطوير مهارة مهنية محددة من خلال سلسلة من الدورات التدريبية
+              المترابطة. جسّد أفكارك على أرض الواقع من خلال مشاريع عمليّة واحصل
+              على شهادة تخصص لإضافتها إلى سيرتك الذاتية.
             </Typography>
             <Button
               sx={{
@@ -220,7 +221,7 @@ const Section = () => {
                 padding: "10px 20px",
               }}
               variant="contained">
-              زر تجريبي
+              تصفح التخصصات
             </Button>
           </Box>
         </Grid>
@@ -237,13 +238,38 @@ const Section = () => {
               justifyContent: "center",
               alignItems: "center",
               color: "#25343F",
-              textAlign: "center",
+              textAlign: "right",
             }}>
-            <Typography variant="h5" sx={{ marginBottom: "1rem" }}>
-              جزء آخر من الصفحة
+            <Typography
+              variant="h5"
+              sx={{
+                marginBottom: "1rem",
+                mt: "0",
+                fontSize: "32px",
+                fontWeight: "800",
+                lineHeight: "43px",
+                color: "#24343f",
+                mb: "10px",
+                textAlign: "right",
+                alignItems: "center",
+              }}>
+              اصقل مهاراتك العمليّة مع تخصّصات <br />
+              إدراك
             </Typography>
-            <Typography variant="body1" sx={{ marginBottom: "1rem" }}>
-              هذا هو الجزء الثاني حيث يمكنك عرض محتوى إضافي أو معلومات أخرى.
+            <Typography
+              variant="body1"
+              sx={{
+                marginBottom: "1rem",
+                textAlign: "right",
+                color: "#000",
+                fontSize: "20px",
+                fontWeight: "400",
+                lineHeight: "29px",
+                alignItems: "center",
+              }}>
+              قم بتطوير مهارة مهنية محددة من خلال سلسلة من الدورات التدريبية
+              <br /> المترابطة. جسّد أفكارك على أرض الواقع من خلال مشاريع عمليّة
+              <br /> واحصل على شهادة تخصص لإضافتها إلى سيرتك الذاتية
             </Typography>
             <Button
               sx={{
@@ -253,7 +279,7 @@ const Section = () => {
                 padding: "10px 20px",
               }}
               variant="contained">
-              زر آخر
+              تصفح التخصصات
             </Button>
           </Box>
         </Grid>

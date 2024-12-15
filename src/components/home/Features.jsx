@@ -62,8 +62,7 @@ const Features = () => {
           borderRadius: "10px",
           justifyContent: "center",
           gap: 4,
-          zIndex: 2,
-          mb: 2,
+          zIndex: 100,
           position: "relative",
         }}>
         <Box sx={{ textAlign: "right", direction: "rtl" }}>
