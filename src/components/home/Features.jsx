@@ -1,8 +1,8 @@
-import { Box, Button, Stack, Typography } from "@mui/material";
+import { Box, Button, Container, Stack, Typography } from "@mui/material";
 
 const Features = () => {
   return (
-    <Box>
+    <Container>
       <Box
         sx={{
           display: "flex",
@@ -190,7 +190,7 @@ const Features = () => {
           />
         </Box>
       </Stack>
-    </Box>
+    </Container>
   );
 };
 
