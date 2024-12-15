@@ -1,4 +1,4 @@
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import Paper from "@mui/material/Paper";
@@ -23,7 +23,7 @@ const Header = () => {
   };
 
   return (
-    <Container>
+    <>
       <Stack
         direction="row"
         spacing={2}
@@ -162,7 +162,7 @@ const Header = () => {
         </Box>
       </Stack>
       <Hero />
-    </Container>
+    </>
   );
 };
 

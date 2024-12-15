@@ -57,7 +57,7 @@ const Login = () => {
 
 
   return (
-    <Container  className="login">
+    < >
       <Box
         sx={{
           display: "flex",
@@ -483,7 +483,7 @@ const Login = () => {
           </div>
         </Box>
       </Stack>
-    </Container>
+    </>
   );
 };
 

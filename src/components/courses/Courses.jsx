@@ -329,36 +329,41 @@ const Courses = () => {
                       "&:hover": {
                         textDecoration: "underline",
                       },
+                      left: "26rem"
                     }}>
                     عرض الجميع
                   </Button>
-                  <Typography
-                    variant="h3"
-                    sx={{
-                      textAlign: "right",
-                      top: "11rem",
-                      position: "absolute",
-                      right: "10rem",
-                    }}>
-                    التخصصّات
-                  </Typography>
-                  <Typography
-                    sx={{
-                      top: "16rem",
-                      position: "absolute",
-                      right: "10rem",
-                      fontSize: "1.3rem",
-                      color: "#4D6679",
-                    }}>
-                    التخصّصات هي برامج مكثّفة تساعدك على التعمّق في مجالات
-                    مختلفة، تعلّم المزيد
-                  </Typography>
+                  <Box sx={{textAlign: "right"}}>
+                    <Typography
+                      variant="h3"
+                      sx={{
+                        top: "11rem",
+                        position: "absolute",
+                        right: "3.3rem",
+                        bottom: "0.5rem"
+                      }}>
+                      التخصصّات
+                    </Typography>
+                    <Typography
+                      sx={{
+                        top: "15rem",
+                        position: "absolute",
+                        fontSize: "1.3rem",
+                        color: "#4D6679",
+                        right: "3.3rem",
+                      }}>
+                      التخصّصات هي برامج مكثّفة تساعدك على التعمّق في مجالات
+                      مختلفة، تعلّم المزيد
+                    </Typography>
+                  </Box>
                 </Box>
-
-                <CardSlider />
               </Grid>
-
             </Grid>
+            <CardSlider />
+            <CardSlider />
+            <CardSlider />
+            <CardSlider />
+            <CardSlider />
           </Grid>
         </Grid>
       </Box>
