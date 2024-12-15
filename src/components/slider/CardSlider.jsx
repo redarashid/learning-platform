@@ -192,7 +192,6 @@
 // };
 
 // export default CardSlider;
-
 import React from "react";
 import {
   Box,
@@ -222,36 +221,36 @@ const BlogCard = () => {
   const blogPosts = [
     {
       id: 1,
-      title: "The Future of Web Development",
+      title: "مستقبل تطوير الويب",
       description:
-        "Exploring the latest trends and technologies shaping the future of web development. From WebAssembly to Edge Computing, discover what's next in the world of web technologies.",
+        "استكشاف أحدث الاتجاهات والتقنيات التي تشكل مستقبل تطوير الويب. من WebAssembly إلى الحوسبة الطرفية، اكتشف ما هو قادم في عالم تقنيات الويب.",
       image: "images.unsplash.com/photo-1504639725590-34d0984388bd",
       author: {
-        name: "John Developer",
+        name: "جون ديفيلوبر",
         avatar: "images.unsplash.com/photo-1472099645785-5658abf4ff4e",
       },
       date: "2024-01-15",
     },
     {
       id: 2,
-      title: "Mastering React Hooks",
+      title: "إتقان React Hooks",
       description:
-        "A comprehensive guide to React Hooks. Learn how to write cleaner, more efficient React components using the power of Hooks.",
+        "دليل شامل لـ React Hooks. تعلم كيفية كتابة مكونات React بشكل أنظف وأكثر كفاءة باستخدام قوة الـ Hooks.",
       image: "images.unsplash.com/photo-1533922922960-9fceb9ef4733",
       author: {
-        name: "Sarah Code",
+        name: "سارة كود",
         avatar: "images.unsplash.com/photo-1438761681033-6461ffad8d80",
       },
       date: "2024-01-10",
     },
     {
       id: 3,
-      title: "UI/UX Best Practices",
+      title: "أفضل ممارسات UI/UX",
       description:
-        "Essential UI/UX design principles for creating user-friendly interfaces. Learn how to enhance user experience through effective design patterns.",
+        "مبادئ تصميم UI/UX الأساسية لإنشاء واجهات سهلة الاستخدام. تعلم كيفية تعزيز تجربة المستخدم من خلال أنماط التصميم الفعالة.",
       image: "images.unsplash.com/photo-1516321318423-f06f85e504b3",
       author: {
-        name: "Mike Design",
+        name: "مايك ديزاين",
         avatar: "images.unsplash.com/photo-1500648767791-00dcc994a43e",
       },
       date: "2024-01-05",
@@ -286,6 +285,7 @@ const BlogCard = () => {
                         display: "-webkit-box",
                         WebkitLineClamp: 2,
                         WebkitBoxOrient: "vertical",
+                        textAlign: "right", // محاذاة النص إلى اليمين
                       }}>
                       {post.title}
                     </Typography>
@@ -299,6 +299,7 @@ const BlogCard = () => {
                         display: "-webkit-box",
                         WebkitLineClamp: 3,
                         WebkitBoxOrient: "vertical",
+                        textAlign: "right", // محاذاة النص إلى اليمين
                       }}>
                       {post.description}
                     </Typography>
@@ -314,15 +315,15 @@ const BlogCard = () => {
                           alt={post.author.name}
                           sx={{ width: 32, height: 32, mr: 1 }}
                         />
-                        <Typography variant="subtitle2">
+                        <Typography variant="subtitle2" sx={{ textAlign: "right" }}>
                           {post.author.name}
                         </Typography>
                       </Box>
                       <Box sx={{ display: "flex", alignItems: "center" }}>
                         <BsCalendar style={{ marginRight: "4px" }} />
                         <time dateTime={post.date}>
-                          <Typography variant="caption">
-                            {new Date(post.date).toLocaleDateString("en-US", {
+                          <Typography variant="caption" sx={{ textAlign: "right" }}>
+                            {new Date(post.date).toLocaleDateString("ar-EG", {
                               year: "numeric",
                               month: "short",
                               day: "numeric",
