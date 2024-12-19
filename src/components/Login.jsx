@@ -27,13 +27,13 @@ const Login = () => {
   const [userName, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLogin = () => {
-    if (userName === "user" && password === "password") {
-      navigate("/couses");
-    } else {
-      alert("Invalid credentials");
-    }
-  };
+  // const handleLogin = () => {
+  //   if (userName === "user" && password === "password") {
+  //     navigate("/couses");
+  //   } else {
+  //     alert("Invalid credentials");
+  //   }
+  // };
 
   const goToCourses = () => {
     navigate("/couses");
@@ -49,6 +49,7 @@ const Login = () => {
     <Box
       sx={{
         background: "#222222cf",
+        width: "100%",
       }}>
       <Box
         sx={{
@@ -215,9 +216,9 @@ const Login = () => {
                   sx={{
                     color: "#ff00008f",
                     "& svg": {
-                      color: "#ff00008f",
+                      color: "#0ca7aa96",
                       "&:hover": {
-                        color: "rgb(244 203 54 / 91%)", // لون عند التمرير
+                        color: "#0BA7AA", // لون عند التمرير
                       },
                     },
                   }}
@@ -233,7 +234,7 @@ const Login = () => {
           />
         </FormControl>
 
-        <Box sx={{ display: "flex", gap: "1rem" }}>
+        <Box sx={{ display: "flex", gap: "13rem",pb: "2rem" }}>
           <Typography
             sx={{ color: "#fff", fontSize: "13px", cursor: "pointer" }}>
             Remeber password
@@ -250,15 +251,18 @@ const Login = () => {
           </Typography>
         </Box>
         <Button
-          onClick={handleLogin}
-          style={{ width: "250px", fontWeight: "bold" }}
+          type="submit"
           variant="contained"
-          disableElevation>
-          Supmit
+          sx={{
+            background: "#0ca7aab8",
+            "&:hover": {
+              background: "#0ca7aa",
+            },
+            width: "250px",
+          }}>
+          سجل
         </Button>
       </Box>
-
-      <div className="line"></div>
 
       <Footer />
     </Box>
