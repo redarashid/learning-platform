@@ -29,7 +29,9 @@ const Header = () => {
         spacing={2}
         mt={3}
         justifyContent="space-between"
-        alignItems="center">
+        alignItems="center"
+        
+        >
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <Button
             sx={{
