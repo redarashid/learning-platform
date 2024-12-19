@@ -1,89 +1,35 @@
-import { Box, Stack, Typography } from "@mui/material";
-import Slider from "react-slick";
+// import { Box, Grid, Typography } from "@mui/material";
+// import Slider from "react-slick";
 
-function SwiperSlick() {
-  var settings = {
-    dots: true,
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    pauseOnHover: true,
-  };
-  return (
-    <div className="slider-container">
-      <Slider {...settings}>
-        <div>
-          <Stack
-            direction="row"
-            sx={{
-              backgroundColor: "#FFF",
-              boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
-              borderRadius: "10px",
-              overflow: "hidden",
-              maxWidth: "1000px",
-              zIndex: 999,
-              position: "relative",
-            }}>
-            <Box
-              sx={{
-                flex: 1,
-                padding: "2rem",
-                display: "flex",
-                backgroundColor: "#FFF",
-                flexDirection: "column",
-                justifyContent: "center",
-                color: "#25343F",
-              }}>
-              <Typography
-                sx={{
-                  color: "#25343F",
-                  fontSize: "2rem",
-                  fontWeight: "bold",
-                  marginBottom: "1rem",
-                }}
-                variant="h3">
-                ادوات القياده الاساسيه
-              </Typography>
-              <Typography
-                sx={{
-                  fontSize: "1rem",
-                  lineHeight: "1.8rem",
-                  color: "#83939E",
-                  textAlign: "right",
-                }}>
-                تم تصميم تخصص أساسيات القيادة المهنية لتزويد القادة الشباب
-                بالمهارات الأساسية اللازمة للتميز في المراحل المبكرة من مسيرتهم
-                المهنية. من خلال ثلاث دورات شيقة، سيطوّر المتعلمون
-              </Typography>
-            </Box>
-            <Box>
-              <img
-                src="/public/images/managers.jpg"
-                style={{
-                  objectFit: "cover",
-                  width: "100%",
-                  height: "100%",
-                }}
-              />
-            </Box>
-          </Stack>{" "}
-        </div>
-        <div>
-          <h3>2</h3>
-        </div>
-        <div>
-          <h3>3</h3>
-        </div>
-      </Slider>
-    </div>
-  );
-}
+// function SwiperSlick() {
+//   var settings = {
+//     dots: true,
+//     infinite: true,
+//     slidesToShow: 3,
+//     slidesToScroll: 1,
+//     autoplay: true,
+//     autoplaySpeed: 2000,
+//     pauseOnHover: true,
+//   };
+//   return (
+//     <div className="slider-container">
+//       <Slider {...settings}>
+//         <div>
+//         </div>
+//         <div>
+//           <h3>2</h3>
+//         </div>
+//         <div>
+//           <h3>3</h3>
+//         </div>
+//       </Slider>
+//     </div>
+//   );
+// }
 
-export default SwiperSlick;
+// export default SwiperSlick;
 
-// <Box>
+// {/* <Box>
 //   <Grid
 //     container
 //     style={{
@@ -267,4 +213,4 @@ export default SwiperSlick;
 //       </Button>
 //     </Grid>
 //   </Grid>
-// </Box>
+// </Box> */}

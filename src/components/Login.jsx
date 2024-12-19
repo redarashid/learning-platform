@@ -1,15 +1,9 @@
-
-
-
 import {
-  Container,
   FormControl,
   IconButton,
   Input,
   InputAdornment,
   InputLabel,
-  Stack,
-  TextField,
   Typography,
 } from "@mui/material";
 import Button from "@mui/material/Button";
@@ -19,6 +13,7 @@ import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import Footer from "./Footer";
 
 const Login = () => {
   const preventDefault = (event) => event.preventDefault();
@@ -28,14 +23,9 @@ const Login = () => {
   const handleClickShowPassword = () => setShowPassword((show) => !show);
   const handleMouseDownPassword = (event) => event.preventDefault();
 
-
-
-
-
   const navigate = useNavigate();
   const [userName, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
 
   const handleLogin = () => {
     if (userName === "user" && password === "password") {
@@ -46,18 +36,20 @@ const Login = () => {
   };
 
   const goToCourses = () => {
-    navigate("/couses")
-  }
+    navigate("/couses");
+  };
   const goToHomePage = () => {
-    navigate("/header")
-  }
+    navigate("/header");
+  };
   const goToLearning = () => {
-    navigate("/learning")
-  }
-
+    navigate("/learning");
+  };
 
   return (
-    < >
+    <Box
+      sx={{
+        background: "#222222cf",
+      }}>
       <Box
         sx={{
           display: "flex",
@@ -66,7 +58,7 @@ const Login = () => {
           padding: "10px 20px",
           backgroundColor: "#333",
           color: "#fff",
-          background: "#222222"
+          background: "#222222",
         }}>
         <Box
           sx={{
@@ -75,7 +67,7 @@ const Login = () => {
           }}
           onClick={preventDefault}>
           <Typography
-            onClick={goToHomePage }
+            onClick={goToHomePage}
             variant="body1"
             component="a"
             href="#features"
@@ -83,7 +75,7 @@ const Login = () => {
               textDecoration: "none",
               color: "#fff",
               "&:hover": {
-                color: "#f00",
+                color: "#0BA7AA",
                 transition: "0.2s",
               },
             }}>
@@ -98,7 +90,7 @@ const Login = () => {
               textDecoration: "none",
               color: "#fff",
               "&:hover": {
-                color: "#f00",
+                color: "#0BA7AA",
                 transition: "0.2s",
               },
             }}>
@@ -113,7 +105,7 @@ const Login = () => {
               textDecoration: "none",
               color: "#fff",
               "&:hover": {
-                color: "#f00",
+                color: "#0BA7AA",
               },
               transition: "0.2s",
             }}>
@@ -127,7 +119,7 @@ const Login = () => {
               textDecoration: "none",
               color: "#fff",
               "&:hover": {
-                color: "#f00",
+                color: "#0BA7AA",
               },
               transition: "0.2s",
             }}>
@@ -141,7 +133,7 @@ const Login = () => {
               textDecoration: "none",
               color: "#fff",
               "&:hover": {
-                color: "#f00",
+                color: "#0BA7AA",
               },
               transition: "0.2s",
             }}>
@@ -185,11 +177,11 @@ const Login = () => {
           Sign in to your account
         </Typography>
 
-        <FormControl style={{width: "30%"}}  variant="standard">
+        <FormControl style={{ width: "30%" }} variant="standard">
           <InputLabel htmlFor="component-simple">Name</InputLabel>
           <Input
             value={userName}
-            onChange={(e)=> setUsername(e.target.value)}
+            onChange={(e) => setUsername(e.target.value)}
             id="component-simple"
             sx={{
               backgroundColor: "#FFF",
@@ -200,7 +192,11 @@ const Login = () => {
           />
         </FormControl>
 
-        <FormControl defaultValue="Password" sx={{ m: 1 }} style={{width: "30%"}}  variant="standard">
+        <FormControl
+          defaultValue="Password"
+          sx={{ m: 1 }}
+          style={{ width: "30%" }}
+          variant="standard">
           <InputLabel htmlFor="Password">Password</InputLabel>
           <Input
             onChange={(e) => setPassword(e.target.value)}
@@ -229,8 +225,7 @@ const Login = () => {
                     showPassword ? "hide the password" : "display the password"
                   }
                   onClick={handleClickShowPassword}
-                  onMouseDown={handleMouseDownPassword}
-                  >
+                  onMouseDown={handleMouseDownPassword}>
                   {showPassword ? <VisibilityOff /> : <Visibility />}
                 </IconButton>
               </InputAdornment>
@@ -238,7 +233,6 @@ const Login = () => {
           />
         </FormControl>
 
-        
         <Box sx={{ display: "flex", gap: "1rem" }}>
           <Typography
             sx={{ color: "#fff", fontSize: "13px", cursor: "pointer" }}>
@@ -246,7 +240,7 @@ const Login = () => {
           </Typography>
           <Typography
             sx={{
-              color: "#ff0000c9",
+              color: "#ff0000ad",
               cursor: "pointer",
               fontSize: "13px",
               ml: "auto",
@@ -265,225 +259,9 @@ const Login = () => {
       </Box>
 
       <div className="line"></div>
-      
-      <Stack
-        sx={{
-          flexDirection: "row",
-          display: "flex",
-          color: "#fff",
-          mt: "1.5rem",
-          gap: "5rem",
-        }}>
-        <Box>
-          <Typography
-            sx={{
-              "&:hover": {
-                color: "red",
-                cursor: "pointer",
-              },
-            }}>
-            Courses
-          </Typography>
-          <Typography
-            sx={{
-              "&:hover": {
-                color: "red",
-                cursor: "pointer",
-              },
-            }}>
-            Learn
-          </Typography>
-          <Typography
-            sx={{
-              "&:hover": {
-                color: "red",
-                cursor: "pointer",
-              },
-            }}>
-            Workshops
-          </Typography>
-          <Typography
-            sx={{
-              "&:hover": {
-                color: "red",
-                cursor: "pointer",
-              },
-            }}>
-            Topics
-          </Typography>
-          <Typography
-            sx={{
-              "&:hover": {
-                color: "red",
-                cursor: "pointer",
-              },
-            }}>
-            FAQ
-          </Typography>
-        </Box>
-        <Box>
-          <Typography
-            sx={{
-              "&:hover": {
-                color: "red",
-                cursor: "pointer",
-              },
-            }}>
-            Teachers
-          </Typography>
-          <Typography
-            sx={{
-              "&:hover": {
-                color: "red",
-                cursor: "pointer",
-              },
-            }}>
-            Reviews
-          </Typography>
-          <Typography
-            sx={{
-              "&:hover": {
-                color: "red",
-                cursor: "pointer",
-              },
-            }}>
-            Guides
-          </Typography>
-          <Typography
-            sx={{
-              "&:hover": {
-                color: "red",
-                cursor: "pointer",
-              },
-            }}>
-            Blog
-          </Typography>
-          <Typography
-            sx={{
-              "&:hover": {
-                color: "red",
-                cursor: "pointer",
-              },
-            }}>
-            Login
-          </Typography>
-        </Box>
-        <Box>
-          <Typography
-            sx={{
-              "&:hover": {
-                color: "red",
-                cursor: "pointer",
-              },
-            }}>
-            Teachers
-          </Typography>
-          <Typography
-            sx={{
-              "&:hover": {
-                color: "red",
-                cursor: "pointer",
-              },
-            }}>
-            Reviews
-          </Typography>
-          <Typography
-            sx={{
-              "&:hover": {
-                color: "red",
-                cursor: "pointer",
-              },
-            }}>
-            Guides
-          </Typography>
-          <Typography
-            sx={{
-              "&:hover": {
-                color: "red",
-                cursor: "pointer",
-              },
-            }}>
-            Blog
-          </Typography>
-          <Typography
-            sx={{
-              "&:hover": {
-                color: "red",
-                cursor: "pointer",
-              },
-            }}>
-            Join Now
-          </Typography>
-        </Box>
-        <Box>
-          <Typography
-            sx={{
-              "&:hover": {
-                color: "red",
-                cursor: "pointer",
-              },
-            }}>
-            Teachers
-          </Typography>
-          <Typography
-            sx={{
-              "&:hover": {
-                color: "red",
-                cursor: "pointer",
-              },
-            }}>
-            Reviews
-          </Typography>
-          <Typography
-            sx={{
-              "&:hover": {
-                color: "red",
-                cursor: "pointer",
-              },
-            }}>
-            Guides
-          </Typography>
-          <Typography
-            sx={{
-              "&:hover": {
-                color: "red",
-                cursor: "pointer",
-              },
-            }}>
-            Blog
-          </Typography>
-          <Typography
-            sx={{
-              "&:hover": {
-                color: "red",
-                cursor: "pointer",
-              },
-            }}>
-            Join Now
-          </Typography>
-        </Box>
-        <Box
-          sx={{
-            color: "gray",
-            display: "flex",
-            mb: "1rem",
-            justifyContent: "center",
-            alignItems: "end",
-          }}>
-          Create By <span style={{ color: "red" }}>Rashid Reda</span> 2024
-        </Box>
-        <Box>
-          <div>
-            <TextField
-              sx={{ background: "#FFF", borderRadius: "4px" }}
-              id="outlined-multiline-static"
-              rows={4}
-              placeholder="Say your opinion..."
-            />
-          </div>
-        </Box>
-      </Stack>
-    </>
+
+      <Footer />
+    </Box>
   );
 };
 
