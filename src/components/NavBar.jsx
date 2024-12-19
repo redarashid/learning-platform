@@ -14,7 +14,6 @@ const NavBar = () => {
 
   const navigate = useNavigate();
 
-
   const goHomePge = () => {
     navigate("/header");
   };
@@ -26,8 +25,8 @@ const NavBar = () => {
         backgroundColor: "#FFF",
         boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
         width: "100%",
-        padding: "1.2rem",
-        zIndex: 1
+        padding: "0.8rem",
+        zIndex: 1,
       }}>
       <Toolbar
         sx={{
@@ -44,7 +43,7 @@ const NavBar = () => {
             height: 40,
             width: "auto",
             marginRight: "auto",
-            cursor: "pointer"
+            cursor: "pointer",
           }}
         />
         <Box
@@ -56,12 +55,20 @@ const NavBar = () => {
             justifyContent: "center",
             margin: "0 auto",
             textAlign: "right",
-            borderRadius: "4px",
+            borderRadius: "50%",
             "&:focus": {
-                border: "1px solid #516088",
-            }
+              border: "1px solid #516088",
+            },
           }}>
-          <TextField fullWidth sx={{}} id="fullWidth" placeholder="Search..." />
+          <TextField
+            sx={{
+              borderRadius: "50%",
+              "&:focus": {
+                borderColor: "#0BA7AA",
+              },
+            }}
+            placeholder="بحث..."
+          />
         </Box>
 
         {isMobile ? (
